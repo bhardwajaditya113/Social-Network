@@ -68,7 +68,10 @@ router.post(
       user: req.user.id,
       company,
       location,
-      website: website && website !== '' ? normalize(website, { forceHttps: true }) : '',
+      website:
+        website && website !== ''
+          ? normalize(website, { forceHttps: true })
+          : '',
       bio,
       skills: Array.isArray(skills)
         ? skills
